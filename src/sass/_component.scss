@@ -1,0 +1,214 @@
+/*================= APP - NAVBAR =================*/
+.navbar {
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    line-height: 1;
+  }
+
+  &__list {
+    font-size: 1.6rem;
+    list-style: none;
+
+    &-item {
+      padding: 1rem 3rem;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $color-grey-dark;
+  }
+
+  &__link:hover {
+    color: $color-sunflower;
+  }
+}
+
+
+/*================= APP - HEADER =================*/
+.greeting {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  &__heading {
+    padding: 3rem 4rem;
+    background-color: $color-grey-light-1;
+    font-weight: 800;
+    line-height: 1.5;
+    color: $color-grey-dark;
+    outline: none;
+  }
+
+  &__avatar {
+    margin-right: -1rem;
+    padding: 0 20rem;
+    background-color: $color-grey-light-4;
+  }
+
+  &__arrow-left {
+    align-self: center;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid $color-grey-light-1;
+    border-top: 1rem solid transparent;
+    height: 0;
+    width: 0;
+  }
+
+  &__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5rem 3rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+    background-color: $color-sunflower-light;
+
+    &-button {
+      background: $color-sunflower-light;
+      border: none;
+      transform: scale(1);
+      transition: all .3s;
+    }
+
+    &-button:hover {
+      transform: scale(1.3);
+    }
+
+    &-button:active {
+      transform: scale(.8);
+    }
+
+    &-link {
+      cursor: pointer;
+    }
+  }
+}
+
+/*================= APP - PROFILE =================*/
+.profile {
+
+  &-introduction {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 50rem;
+    padding: 4rem 2rem 2rem;
+    transform: translate(-70%, 0);
+    background-color: $color-sunflower-light;
+
+    &__heading {
+      position: relative;
+      margin-bottom: 4rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &__heading::after {
+      content: "";
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      border: 3px solid $color-black;
+      width: 7rem;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 50%;
+    left: 61.7%;
+    padding: 6rem 7rem;
+    text-align: center;
+    background-color: $color-grey-light-3;
+  }
+
+  .text-position-bottom-left {
+    position: absolute;
+    bottom: -12rem;
+    left: 0;
+    font-size: 25rem;
+    font-weight: 800;
+    letter-spacing: .5rem;
+    color: $color-grey-light-2;
+    overflow: hidden;
+  }
+}
+
+
+/*================= APP - WORK =================*/
+.work-projects {
+  padding: 10rem 20rem;
+
+  &__item {
+    width: 33.3333%;
+    background-color: $color-white;
+  }
+
+  .item__picture {
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: $color-sunflower-light;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 100;
+    transition: all .2s;
+    background-color: rgba($color-sunflower-light, .8);
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  .overlay__search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .item__picture:hover .overlay {
+    opacity: 1;
+  }
+
+  .item__heading {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+
+  .item__description {
+    padding: 0 1rem;
+  }
+}
+

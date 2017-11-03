@@ -1,0 +1,28 @@
+.app-navbar {
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  z-index: 99;
+}
+
+.header {
+  position: relative;
+  height: 90vh;
+  background-image: url('../img/header.jpg');
+  background-size: cover;
+  //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.profile {
+  position: relative;
+  height: 95vh;
+}
+
+.work {
+  position: relative;
+  height: 100vh;
+  z-index: 10;
+  background-color: $color-grey-dark;
+}
+
+
